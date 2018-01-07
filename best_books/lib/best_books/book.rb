@@ -3,10 +3,6 @@ class BestBooks::Book
 attr_accessor :title, :author, :reviews, :weeks_on_list, :profile_url, :price, :quote
 
   def self.today
-    puts "1.  book 1"
-    puts "2.  book 2"
-    puts ""
-
     book1=self.new
     book1.title="book1"
     book1.author="this is some name"
