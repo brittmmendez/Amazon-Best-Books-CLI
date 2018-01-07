@@ -9,18 +9,13 @@ class BestBooks::CLI
   def introduction
     puts "- - - - - - - - - -Amazon Charts- - - - - - - - -"
     puts "The Top 20 Most Sold & Most Read Books of the Week"
+    puts "- - - - - - -WEEK OF DECEMBER 31, 2017- - - - - -"
     puts ""
   end
 
   def list_books
-    puts "1.  book 1"
-    puts "2.  book 2"
-    puts "3.  book 3"
-    puts "4.  book 4"
-    puts "5.  book 5"
-    puts "6.  book 6"
-    puts "7.  book 7"
-    puts ""
+    @books=BestBooks::Book.today
+
   end
 
   def pick_book
@@ -34,16 +29,6 @@ class BestBooks::CLI
         puts "book 1 is about xyz"
       when "2"
         puts "book 2 is about xyz"
-      when "3"
-        puts "book 3 is about xyz"
-      when "4"
-        puts "book 4 is about xyz"
-      when "5"
-        puts "book 5 is about xyz"
-      when "6"
-        puts "book 6 is about xyz"
-      when "7"
-        puts "book 7 is about xyz"
       when "list"
       list_books
     else
