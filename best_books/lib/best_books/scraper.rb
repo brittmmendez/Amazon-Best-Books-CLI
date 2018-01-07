@@ -2,7 +2,6 @@ class BestBooks::Scraper
 
   def get_page
     doc = Nokogiri::HTML(open("https://www.amazon.com/charts"))
-    binding.pry
   end
 
   def scrape_main_chart

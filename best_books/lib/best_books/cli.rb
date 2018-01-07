@@ -36,7 +36,7 @@ class BestBooks::CLI
         puts "#{book_pick.price}"
         puts "#{book_pick.quote}"
         puts "For a complete summary and purchasing optiosn, go to https://www.amazon.com/#{book_pick.profile_url}"
-      elsif input.to_i== "list"
+      elsif input == "list"
          list_books
       else
         puts "Invalid number, Type the number for the book that you would like to see more information for, type 'list' to see the books again, or exit:"
