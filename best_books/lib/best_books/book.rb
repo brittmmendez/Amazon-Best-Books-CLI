@@ -3,7 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 
 class BestBooks::Book
-  attr_accessor :title, :author, :reviews, :weeks_on_list, :profile_url,:read_sample, :audible_sample, :summary
+  attr_accessor :title, :author, :reviews, :weeks_on_list, :profile_url,:read_sample, :summary
 
   @@books=[]
 
@@ -17,21 +17,19 @@ class BestBooks::Book
       weeks_on_list=book.css(".kc-wol").text
       profile_url=book.css(".icons .see-in-store").attribute("href").value
       read_sample=book.css(".icons .read").attribute("href").value
-      audible_sample=book.css(".icons .a-hidden").attribute("data-audiosource").value
       summary=book.css(".kc-data-story-text-container p").first.text
 
-      BestBooks::Book.new(title, author, reviews, weeks_on_list, profile_url, read_sample, audible_sample, summary)
+      BestBooks::Book.new(title, author, reviews, weeks_on_list, profile_url, read_sample, summary)
       end
   end
 
-  def initialize(title=nil, author=nil, reviews=nil, weeks_on_list=nil, profile_url=nil, read_sample=nil,audible_sample=nil,summary=nil)
+  def initialize(title=nil, author=nil, reviews=nil, weeks_on_list=nil, profile_url=nil, read_sample=nil,summary=nil)
     @title=title
     @author=author
     @reviews=reviews
     @weeks_on_list=weeks_on_list
     @profile_url=profile_url
     @read_sample=read_sample
-    @audible_sample=audible_sample
     @summary=summary
 
     save

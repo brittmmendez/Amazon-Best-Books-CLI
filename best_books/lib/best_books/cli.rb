@@ -39,7 +39,6 @@ class BestBooks::CLI
         puts "This book has spent #{book_pick.weeks_on_list}!"
         puts ""
         puts "Read free sample: #{book_pick.read_sample}"
-        puts "Listen to Audible sample: #{book_pick.audible_sample}"
         puts "Purchasing Options: https://www.amazon.com/#{book_pick.profile_url}"
         puts ""
         puts "Summary:"
