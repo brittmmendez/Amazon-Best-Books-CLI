@@ -20,7 +20,7 @@ class BestBooks::Book
       summary=book.css(".kc-data-story-text-container p").first.text
 
       BestBooks::Book.new(title, author, reviews, weeks_on_list, profile_url, read_sample, summary)
-      end
+    end
   end
 
   def initialize(title=nil, author=nil, reviews=nil, weeks_on_list=nil, profile_url=nil, read_sample=nil,summary=nil)
