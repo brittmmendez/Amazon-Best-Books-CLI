@@ -25,7 +25,7 @@ class BestBooks::CLI
     input =""
     while input != "exit"
       puts ""
-      puts "Type the number for the category that you would like to see the top apps for, type 'list' to see the categories again, or exit:"
+      puts "Type the number for the book that you would like to see more information on, type 'list' to see the categories again, or exit:"
       input=gets.strip.downcase
 
       if input == "list"
