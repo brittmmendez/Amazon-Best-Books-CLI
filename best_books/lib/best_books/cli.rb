@@ -1,6 +1,7 @@
 class BestBooks::CLI
   def call
-    BestBooks::Book.scraper #wanted this to be BestBooks::Scraper.make_books but couldn't get scraper.rb connected
+    #BestBooks::Book.scraper #used this when BestBooks::Book.scraper was active
+    BestBooks::Scraper.make_books
     introduction
     list_books
     pick_book
@@ -10,7 +11,6 @@ class BestBooks::CLI
   def introduction
     puts "- - - - - - - - - -Amazon Charts- - - - - - - - -"
     puts "The Top 20 Most Sold & Most Read Books of the Week"
-    puts "- - - - - - -WEEK OF DECEMBER 31, 2017- - - - - -"
     puts ""
   end
 

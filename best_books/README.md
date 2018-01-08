@@ -1,8 +1,6 @@
 # BestBooks
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/best_books`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to my Best-Books gem! This gem was designed to help me stay on track with my new years resolution! I would like to read at least 1 book a month.  So, I created an application that provides a CLI to view Amazon's weekly top 20 best sellers. From this list, I can then select a book and see the author, how long it's been on the list, see the rating and summary, read an interactive  sample, and download the Audible version.    
 
 ## Installation
 
