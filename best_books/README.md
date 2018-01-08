@@ -20,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once you run: ./best_books/bin/best-books
+you will be greeted and given the list of top 20 books.
+You can then input the number that represents the book you’d like more information on
 
 ## Development
 
