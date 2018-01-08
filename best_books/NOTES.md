@@ -5,7 +5,7 @@ https://www.amazon.com/gp/new-releases/digital-text/ref=zg_bs_tab_t_bsnr
 
 https://www.amazon.com/charts/2017-12-31/mostread/nonfiction/
 
-User types  Best-Books
+User types  ./best_books/bin/best-books
 CLI - Greats user and gives intro
 Puts list of top 20 books
 CLI- asks user for input number on which book they’d like more information on
@@ -21,7 +21,5 @@ What all does my book need?
 Title
 Author
 Rating
-edition
-Price
 URL Purchasing information (will use to get to summary)
 Summary

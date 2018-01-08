@@ -1,6 +1,6 @@
 class BestBooks::CLI
   def call
-    BestBooks::Book.scraper ## will need to change to BestBooks::Scraper.make_books once scraper works
+    BestBooks::Book.scraper #wanted this to be BestBooks::Scraper.make_books but couldn't get scraper.rb connected
     introduction
     list_books
     pick_book
@@ -37,12 +37,17 @@ class BestBooks::CLI
         puts "Rating:  #{book_pick.reviews}"
         puts ""
         puts "This book has spent #{book_pick.weeks_on_list}!"
+        puts ""
+        puts "Read free sample: #{book_pick.read_sample}"
+        puts "Listen to Audible sample: #{book_pick.audible_sample}"
         puts "Purchasing Options: https://www.amazon.com/#{book_pick.profile_url}"
-        puts""
+        puts ""
         puts "Summary:"
         puts "#{book_pick.summary}"
+
       elsif input == "list"
          list_books
+
       else
         puts "Invalid number, Type the number for the book that you would like to see more information for, type 'list' to see the books again, or exit:"
       end
