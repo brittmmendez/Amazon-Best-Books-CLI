@@ -1,5 +1,7 @@
 class BestBooks::CLI
   def call
+    #BestBooks::Scraper.make_books
+    BestBooks::Book.practice
     introduction
     list_books
     pick_book
@@ -14,7 +16,7 @@ class BestBooks::CLI
   end
 
   def list_books
-    @books=BestBooks::Book.today
+    @books=BestBooks::Book.all
     @books.each.with_index(1) do |book,index|
       puts "#{index}.  #{book.title}"
     end

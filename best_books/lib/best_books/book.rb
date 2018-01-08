@@ -3,52 +3,29 @@ require 'nokogiri'
 require 'open-uri'
 
 class BestBooks::Book
-attr_accessor :title, :author, :reviews, :weeks_on_list, :profile_url, :price, :quote
+  attr_accessor :title, :author, :reviews, :weeks_on_list, :profile_url, :price, :quote
 
-def self.today
-      book1=self.new
-      book1.title="book1"
-      book1.author="this is some name"
-      book1.reviews="this is a review"
-      book1.weeks_on_list="this is a weeks_on_list"
-      book1.profile_url="this is a profile_url"
-      book1.price="this is a price"
-      book1.quote="this is a quote"
-      book2=self.new
-      book2.title="book2"
-      book2.author="this is some name"
-      book2.reviews="this is a review"
-      book2.weeks_on_list="this is a weeks_on_list"
-      book2.profile_url="this is a profile_url"
-      book2.price="this is a price"
-      book2.quote="this is a quote"
-      [book1,book2]
+  @@books=[]
+
+  def  self.practice
+    book1=self.new(title="Title Name", author="author Name", reviews="review goes here", weeks_on_list="5 weeks on list", summary="this book is about",profile_url="www....")
   end
 
-#def self.new_from_charts(book)
-#  self.new(title, author, reviews, weeks_on_list, profile_url, summary, price, quote)
-#end
+  def initialize(title=nil, author=nil, reviews=nil, weeks_on_list=nil, summary=nil,profile_url=nil)
+    @title=title
+    @author=author
+    @reviews=reviews
+    @weeks_on_list=weeks_on_list
+    @profile_url=profile_url
+    save
+  end
 
-#def initialize(title=nil, author=nil, reviews=nil, weeks_on_list=nil, profile_url=nil, summary=nil)
-#  @title=title
-##  @author=author
-#  @reviews=reviews
-#  @weeks_on_list=weeks_on_list
-#  @profile_url=profile_url
-#  @@all<<self
-#end
+  def self.all
+    @@books
+  end
 
-#def doc
-#  url="https://www.amazon.com/#{self.profile_url}"
-#  doc = Nokogiri::HTML(open(url))
-#end
-
-#def  price
-#  @price=nil
-#end
-
-#def  quote
-#  @quote=nil
-#end
+   def save
+     @@books<<self
+   end
 
 end
