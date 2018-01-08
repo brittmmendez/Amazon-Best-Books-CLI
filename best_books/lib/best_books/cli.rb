@@ -1,7 +1,6 @@
 class BestBooks::CLI
   def call
-    #BestBooks::Scraper.make_books
-    BestBooks::Book.practice
+    BestBooks::Book.practice ## will need to change to BestBooks::Scraper.make_books once scraper works
     introduction
     list_books
     pick_book
@@ -31,13 +30,12 @@ class BestBooks::CLI
 
       if input.to_i>0
         book_pick=@books[input.to_i-1]
-        puts "#{book_pick.title}"
-        puts "#{book_pick.author}"
-        puts "#{book_pick.reviews}"
-        puts "#{book_pick.weeks_on_list}"
-        puts "#{book_pick.price}"
-        puts "#{book_pick.quote}"
-        puts "For a complete summary and purchasing optiosn, go to https://www.amazon.com/#{book_pick.profile_url}"
+        puts "- #{book_pick.title}"
+        puts "- #{book_pick.author}"
+        puts "- #{book_pick.reviews}"
+        puts "- #{book_pick.weeks_on_list}"
+        puts "- #{book_pick.summary}"
+        puts "- For a complete summary and purchasing optiosn, go to https://www.amazon.com/#{book_pick.profile_url}"
       elsif input == "list"
          list_books
       else
