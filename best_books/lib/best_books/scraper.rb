@@ -21,6 +21,7 @@ class BestBooks::Scraper
       text.weeks_on_list=book.css(".kc-wol").text
       text.profile_url=book.css(".icons .see-in-store").attribute("href").value
       text.read_sample=book.css(".icons .read").attribute("href").value
+      text.audible_sample=book.css(".a-hidden").attribute("data-audiosource").value
       text.summary=book.css(".kc-data-story-text-container p").first.text
     end
   end

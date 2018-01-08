@@ -28,27 +28,28 @@ class BestBooks::CLI
       puts "Type the number for the category that you would like to see the top apps for, type 'list' to see the categories again, or exit:"
       input=gets.strip.downcase
 
-      if input.to_i>0
+      if input == "list"
+        list_books
+
+      elsif input.to_i>20
+        puts "---Invalid number---"
+
+        elsif input.to_i>0
         book_pick=@books[input.to_i-1]
         puts ""
-        puts "- - - - - - -Book Review- - - - - -"
-        puts "Title:   #{book_pick.title}"
-        puts "Author:#{book_pick.author}"
-        puts "Rating:  #{book_pick.reviews}"
+        puts "- - - - - - -#{book_pick.title}- - - - - -"
         puts ""
         puts "This book has spent #{book_pick.weeks_on_list}!"
         puts ""
-        puts "Read free sample: #{book_pick.read_sample}"
-        puts "Purchasing Options: https://www.amazon.com/#{book_pick.profile_url}"
+        puts "Author:            #{book_pick.author}"
+        puts "Rating:              #{book_pick.reviews}"
+        puts "Read sample:         #{book_pick.read_sample}"
+        puts "Audible sample:      #{book_pick.audible_sample}"
+        puts "Purchasing Options:  https://www.amazon.com/#{book_pick.profile_url}"
         puts ""
-        puts "Summary:"
+        puts "- - - - - - - - - Summary - - - - - - - -"
         puts "#{book_pick.summary}"
-
-      elsif input == "list"
-         list_books
-
-      else
-        puts "Invalid number, Type the number for the book that you would like to see more information for, type 'list' to see the books again, or exit:"
+        puts ""
       end
     end
   end
