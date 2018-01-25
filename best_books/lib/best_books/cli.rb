@@ -31,6 +31,10 @@ class BestBooks::CLI
       if input == "list"
         list_books
 
+      elsif input == "more"
+        list_books(19)
+
+
       elsif input.to_i>20
         puts "---Invalid number---"
 
