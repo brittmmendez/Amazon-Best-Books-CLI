@@ -59,7 +59,7 @@ class BestBooks::CLI
   end
 
   def exit_cli
-    puts "Thank you trying my Gem!  I hope you found a new book to read!"
+    puts "Thank you for trying my Gem!  I hope you found a new book to read!"
   end
 
 end
